@@ -4,9 +4,14 @@
 
 ## Live Website
 
-**[https://rkpundhir90.github.io/kinsar-intelligence/](https://rkpundhir90.github.io/kinsar-intelligence/)**
+**[https://kinsar.ai](https://kinsar.ai)**
 
-Hosted on GitHub Pages · Deployed from `main` branch · HTTPS enforced
+Custom domain · Hosted on GitHub Pages · Deployed from `main` branch · HTTPS enforced
+
+> **DNS Setup Required:** Point `kinsar.ai` to GitHub Pages:
+> - A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+> - AAAA records: `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
+> - Or a `CNAME` for `www` pointing to `rkpundhir90.github.io`
 
 ---
 

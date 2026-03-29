@@ -12,11 +12,64 @@
 </head>
 <body>
 
+  <!-- SVG shared defs (gradients + filters for logo) -->
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="kg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#6366f1"/>
+        <stop offset="55%" stop-color="#a78bfa"/>
+        <stop offset="100%" stop-color="#38bdf8"/>
+      </linearGradient>
+      <radialGradient id="krg" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.22"/>
+        <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+      </radialGradient>
+      <filter id="kgf" x="-100%" y="-100%" width="300%" height="300%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="ksf" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+  </svg>
+
   <!-- NAV -->
   <header class="nav">
     <div class="container nav__inner">
       <a href="#" class="logo">
-        <span class="logo__mark">K</span>
+        <span class="logo__mark">
+          <svg width="34" height="34" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kinsar Intelligence">
+            <circle cx="50" cy="50" r="46" fill="url(#krg)"/>
+            <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="rgba(99,102,241,0.08)" stroke="url(#kg)" stroke-width="1.5"/>
+            <polygon points="50,21 75,35.5 75,64.5 50,79 25,64.5 25,35.5" fill="none" stroke="url(#kg)" stroke-width="0.8" stroke-dasharray="3,4" opacity="0.25"/>
+            <line x1="36" y1="24" x2="64" y2="76" stroke="#38bdf8" stroke-width="0.7" opacity="0.15"/>
+            <line x1="36" y1="76" x2="64" y2="24" stroke="#a78bfa" stroke-width="0.7" opacity="0.15"/>
+            <line x1="64" y1="24" x2="64" y2="76" stroke="url(#kg)" stroke-width="0.8" opacity="0.2"/>
+            <line x1="50" y1="37" x2="64" y2="50" stroke="#38bdf8" stroke-width="0.8" opacity="0.28"/>
+            <line x1="50" y1="63" x2="64" y2="50" stroke="#a78bfa" stroke-width="0.8" opacity="0.28"/>
+            <line x1="36" y1="24" x2="36" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
+            <line x1="36" y1="50" x2="64" y2="24" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
+            <line x1="36" y1="50" x2="64" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
+            <circle cx="36" cy="50" r="12" fill="url(#kg)" opacity="0.08" filter="url(#kgf)"/>
+            <circle cx="36" cy="24" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
+            <circle cx="36" cy="76" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
+            <circle cx="64" cy="24" r="4" fill="#38bdf8" filter="url(#ksf)"/>
+            <circle cx="64" cy="76" r="4" fill="#a78bfa" filter="url(#ksf)"/>
+            <circle cx="50" cy="37" r="2.5" fill="#a78bfa"/>
+            <circle cx="50" cy="63" r="2.5" fill="#6366f1"/>
+            <circle cx="64" cy="50" r="3" fill="#38bdf8" filter="url(#ksf)" opacity="0.85"/>
+            <circle cx="36" cy="50" r="6.5" fill="url(#kg)" filter="url(#kgf)"/>
+            <circle cx="36" cy="50" r="3.5" fill="#fff" opacity="0.3"/>
+            <circle cx="50" cy="6" r="2" fill="#6366f1" opacity="0.6"/>
+            <circle cx="88" cy="28" r="2" fill="#38bdf8" opacity="0.5"/>
+            <circle cx="88" cy="72" r="2" fill="#a78bfa" opacity="0.5"/>
+            <circle cx="50" cy="94" r="2" fill="#6366f1" opacity="0.6"/>
+            <circle cx="12" cy="72" r="2" fill="#a78bfa" opacity="0.5"/>
+            <circle cx="12" cy="28" r="2" fill="#38bdf8" opacity="0.5"/>
+          </svg>
+        </span>
         <span class="logo__text">Kinsar Intelligence</span>
       </a>
       <nav class="nav__links">
@@ -44,6 +97,49 @@
         <a href="#contact" class="btn btn--ghost">Get In Touch</a>
       </div>
     </div>
+    <div class="hero__emblem" aria-hidden="true">
+      <svg width="300" height="300" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer spinning rings -->
+        <circle cx="65" cy="65" r="62" fill="none" stroke="url(#kg)" stroke-width="0.7" stroke-dasharray="9,15" opacity="0.22">
+          <animateTransform attributeName="transform" type="rotate" from="0 65 65" to="360 65 65" dur="55s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="65" cy="65" r="57.5" fill="none" stroke="url(#kg)" stroke-width="0.4" stroke-dasharray="2,18" opacity="0.16">
+          <animateTransform attributeName="transform" type="rotate" from="360 65 65" to="0 65 65" dur="38s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="65" cy="65" r="53" fill="none" stroke="url(#kg)" stroke-width="0.3" opacity="0.1"/>
+        <!-- Main logo translated to center of 130x130 -->
+        <g transform="translate(15,15)">
+          <circle cx="50" cy="50" r="46" fill="url(#krg)"/>
+          <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="rgba(99,102,241,0.08)" stroke="url(#kg)" stroke-width="1.5"/>
+          <polygon points="50,21 75,35.5 75,64.5 50,79 25,64.5 25,35.5" fill="none" stroke="url(#kg)" stroke-width="0.8" stroke-dasharray="3,4" opacity="0.25"/>
+          <line x1="36" y1="24" x2="64" y2="76" stroke="#38bdf8" stroke-width="0.7" opacity="0.15"/>
+          <line x1="36" y1="76" x2="64" y2="24" stroke="#a78bfa" stroke-width="0.7" opacity="0.15"/>
+          <line x1="64" y1="24" x2="64" y2="76" stroke="url(#kg)" stroke-width="0.8" opacity="0.2"/>
+          <line x1="50" y1="37" x2="64" y2="50" stroke="#38bdf8" stroke-width="0.8" opacity="0.28"/>
+          <line x1="50" y1="63" x2="64" y2="50" stroke="#a78bfa" stroke-width="0.8" opacity="0.28"/>
+          <line x1="36" y1="24" x2="36" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
+          <line x1="36" y1="50" x2="64" y2="24" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
+          <line x1="36" y1="50" x2="64" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
+          <circle cx="36" cy="50" r="12" fill="url(#kg)" opacity="0.08" filter="url(#kgf)"/>
+          <circle cx="36" cy="24" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
+          <circle cx="36" cy="76" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
+          <circle cx="64" cy="24" r="4" fill="#38bdf8" filter="url(#ksf)"/>
+          <circle cx="64" cy="76" r="4" fill="#a78bfa" filter="url(#ksf)"/>
+          <circle cx="50" cy="37" r="2.5" fill="#a78bfa"/>
+          <circle cx="50" cy="63" r="2.5" fill="#6366f1"/>
+          <circle cx="64" cy="50" r="3" fill="#38bdf8" filter="url(#ksf)" opacity="0.85"/>
+          <circle cx="36" cy="50" r="6.5" fill="url(#kg)" filter="url(#kgf)"/>
+          <circle cx="36" cy="50" r="3.5" fill="#fff" opacity="0.3"/>
+          <circle cx="50" cy="6" r="2" fill="#6366f1" opacity="0.6"/>
+          <circle cx="88" cy="28" r="2" fill="#38bdf8" opacity="0.5"/>
+          <circle cx="88" cy="72" r="2" fill="#a78bfa" opacity="0.5"/>
+          <circle cx="50" cy="94" r="2" fill="#6366f1" opacity="0.6"/>
+          <circle cx="12" cy="72" r="2" fill="#a78bfa" opacity="0.5"/>
+          <circle cx="12" cy="28" r="2" fill="#38bdf8" opacity="0.5"/>
+        </g>
+      </svg>
+    </div>
+
     <div class="hero__scroll">
       <span></span>
     </div>
@@ -128,40 +224,70 @@
     <div class="container">
       <div class="section-tag center">Vision &amp; Mission</div>
       <h2 class="section-title center">What Drives Us</h2>
+      <p class="section-sub center">Built on a clear purpose — to turn intelligence into real-world impact.</p>
 
+      <!-- Name meaning card -->
       <div class="mission__name-card">
-        <div class="mission__quote-mark">&ldquo;</div>
-        <p class="mission__quote-text">KINSAR INTELLIGENCE signifies a forward-thinking and innovative entity focused on delivering smart, data-driven solutions. It reflects a blend of advanced technology and strategic insight, aimed at solving complex business challenges — embodying intelligence, precision, and a commitment to empowering organizations through modern digital and analytical capabilities.</p>
-        <div class="mission__name-label">The Name &amp; Its Meaning</div>
-      </div>
-
-      <div class="mission__statement">
-        <div class="mission__statement-icon">&#127919;</div>
-        <div>
-          <h3>Our Mission</h3>
-          <p>To engage in research, innovation, and development of new technologies, products, and solutions in the fields of artificial intelligence, machine learning, and emerging digital ecosystems.</p>
+        <div class="mission__name-lines">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="mission__name-inner">
+          <div class="mission__quote-icon">&#10077;</div>
+          <blockquote class="mission__quote-text">
+            KINSAR INTELLIGENCE signifies a forward-thinking and innovative entity focused on delivering smart, data-driven solutions. It reflects a blend of advanced technology and strategic insight, aimed at solving complex business challenges &mdash; embodying <em>intelligence</em>, <em>precision</em>, and a commitment to empowering organizations through modern digital and analytical capabilities.
+          </blockquote>
+          <div class="mission__name-footer">
+            <span class="mission__pulse-dot"></span>
+            <span class="mission__name-label">The Name &amp; Its Meaning</span>
+          </div>
         </div>
       </div>
 
+      <!-- Mission statement -->
+      <div class="mission__statement">
+        <div class="mission__statement-icon-wrap">
+          <span>&#127919;</span>
+        </div>
+        <div class="mission__statement-body">
+          <div class="mission__statement-tag">Our Mission</div>
+          <p>To engage in research, innovation, and development of new technologies, products, and solutions in the fields of <strong>artificial intelligence</strong>, <strong>machine learning</strong>, and <strong>emerging digital ecosystems</strong>.</p>
+        </div>
+        <div class="mission__statement-glow"></div>
+      </div>
+
+      <!-- Objectives -->
       <div class="mission__objectives">
+
         <div class="objective-card">
-          <div class="objective-card__num">01</div>
-          <div class="objective-card__icon">&#128187;</div>
+          <div class="objective-card__top">
+            <span class="objective-card__num">01</span>
+            <span class="objective-card__icon">&#128187;</span>
+          </div>
           <h3>Software &amp; Digital Solutions</h3>
           <p>Design, develop, test, maintain, and deliver computer software, mobile applications, web-based platforms, SaaS products, and digital solutions using modern technologies including artificial intelligence, data analytics, and cloud computing.</p>
+          <div class="objective-card__bar"></div>
         </div>
+
         <div class="objective-card">
-          <div class="objective-card__num">02</div>
-          <div class="objective-card__icon">&#128101;</div>
+          <div class="objective-card__top">
+            <span class="objective-card__num">02</span>
+            <span class="objective-card__icon">&#128101;</span>
+          </div>
           <h3>Consultancy &amp; Advisory</h3>
           <p>Provide consultancy, advisory, and support services in information technology, software development, system integration, digital transformation, and business process automation to clients in India and abroad.</p>
+          <div class="objective-card__bar"></div>
         </div>
+
         <div class="objective-card">
-          <div class="objective-card__num">03</div>
-          <div class="objective-card__icon">&#128736;</div>
+          <div class="objective-card__top">
+            <span class="objective-card__num">03</span>
+            <span class="objective-card__icon">&#128736;</span>
+          </div>
           <h3>IT-Enabled Services</h3>
           <p>Undertake IT-enabled services including software support, maintenance, managed services, data processing, cybersecurity services, and other related technological services.</p>
+          <div class="objective-card__bar"></div>
         </div>
+
       </div>
     </div>
   </section>
@@ -306,7 +432,37 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <a href="#" class="logo">
-          <span class="logo__mark">K</span>
+          <span class="logo__mark">
+          <svg width="34" height="34" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kinsar Intelligence">
+            <circle cx="50" cy="50" r="46" fill="url(#krg)"/>
+            <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="rgba(99,102,241,0.08)" stroke="url(#kg)" stroke-width="1.5"/>
+            <polygon points="50,21 75,35.5 75,64.5 50,79 25,64.5 25,35.5" fill="none" stroke="url(#kg)" stroke-width="0.8" stroke-dasharray="3,4" opacity="0.25"/>
+            <line x1="36" y1="24" x2="64" y2="76" stroke="#38bdf8" stroke-width="0.7" opacity="0.15"/>
+            <line x1="36" y1="76" x2="64" y2="24" stroke="#a78bfa" stroke-width="0.7" opacity="0.15"/>
+            <line x1="64" y1="24" x2="64" y2="76" stroke="url(#kg)" stroke-width="0.8" opacity="0.2"/>
+            <line x1="50" y1="37" x2="64" y2="50" stroke="#38bdf8" stroke-width="0.8" opacity="0.28"/>
+            <line x1="50" y1="63" x2="64" y2="50" stroke="#a78bfa" stroke-width="0.8" opacity="0.28"/>
+            <line x1="36" y1="24" x2="36" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
+            <line x1="36" y1="50" x2="64" y2="24" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
+            <line x1="36" y1="50" x2="64" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
+            <circle cx="36" cy="50" r="12" fill="url(#kg)" opacity="0.08" filter="url(#kgf)"/>
+            <circle cx="36" cy="24" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
+            <circle cx="36" cy="76" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
+            <circle cx="64" cy="24" r="4" fill="#38bdf8" filter="url(#ksf)"/>
+            <circle cx="64" cy="76" r="4" fill="#a78bfa" filter="url(#ksf)"/>
+            <circle cx="50" cy="37" r="2.5" fill="#a78bfa"/>
+            <circle cx="50" cy="63" r="2.5" fill="#6366f1"/>
+            <circle cx="64" cy="50" r="3" fill="#38bdf8" filter="url(#ksf)" opacity="0.85"/>
+            <circle cx="36" cy="50" r="6.5" fill="url(#kg)" filter="url(#kgf)"/>
+            <circle cx="36" cy="50" r="3.5" fill="#fff" opacity="0.3"/>
+            <circle cx="50" cy="6" r="2" fill="#6366f1" opacity="0.6"/>
+            <circle cx="88" cy="28" r="2" fill="#38bdf8" opacity="0.5"/>
+            <circle cx="88" cy="72" r="2" fill="#a78bfa" opacity="0.5"/>
+            <circle cx="50" cy="94" r="2" fill="#6366f1" opacity="0.6"/>
+            <circle cx="12" cy="72" r="2" fill="#a78bfa" opacity="0.5"/>
+            <circle cx="12" cy="28" r="2" fill="#38bdf8" opacity="0.5"/>
+          </svg>
+        </span>
           <span class="logo__text">Kinsar Intelligence</span>
         </a>
         <p>Data-driven intelligence for modern enterprises.</p>
