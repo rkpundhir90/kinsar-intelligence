@@ -2,15 +2,52 @@
 
 > Turning Data Into Decisive Intelligence
 
-## About
-
-**Kinsar Intelligence LLP** is a technology and data intelligence firm registered in India (Est. 2025), built to help organisations harness the full power of their data. We combine deep technical expertise with strategic thinking to deliver solutions that are not just technically sound, but genuinely impactful.
-
 ## Live Website
 
 **[https://rkpundhir90.github.io/kinsar-intelligence/](https://rkpundhir90.github.io/kinsar-intelligence/)**
 
-Hosted on GitHub Pages, deployed from the `main` branch.
+Hosted on GitHub Pages · Deployed from `main` branch · HTTPS enforced
+
+---
+
+## What Our Name Means
+
+> *"KINSAR INTELLIGENCE signifies a forward-thinking and innovative entity focused on delivering smart, data-driven solutions. It reflects a blend of advanced technology and strategic insight, aimed at solving complex business challenges — embodying intelligence, precision, and a commitment to empowering organizations through modern digital and analytical capabilities."*
+
+---
+
+## About
+
+**Kinsar Intelligence LLP** is a technology and data intelligence firm registered in India (Est. 2025). We help organisations harness the full power of their data by combining deep technical expertise with strategic thinking — delivering solutions that are not just technically sound, but genuinely impactful.
+
+### Core Values
+
+| Value | Description |
+|-------|-------------|
+| **Clarity** | We make complexity simple and insights actionable |
+| **Integrity** | Honest advice, transparent processes, real results |
+| **Innovation** | Continuously evolving with the frontier of technology |
+
+---
+
+## Mission
+
+To engage in research, innovation, and development of new technologies, products, and solutions in the fields of **artificial intelligence**, **machine learning**, and **emerging digital ecosystems**.
+
+---
+
+## Business Objectives
+
+**01 — Software & Digital Solutions**
+Design, develop, test, maintain, and deliver computer software, mobile applications, web-based platforms, SaaS products, and other digital solutions using modern technologies including artificial intelligence, data analytics, and cloud computing.
+
+**02 — Consultancy & Advisory**
+Provide consultancy, advisory, and support services in the field of information technology, software development, system integration, digital transformation, and business process automation to clients in India and abroad.
+
+**03 — IT-Enabled Services**
+Undertake IT-enabled services including software support, maintenance, managed services, data processing, cybersecurity services, and other related technological services.
+
+---
 
 ## Services
 
@@ -23,37 +60,42 @@ Hosted on GitHub Pages, deployed from the `main` branch.
 | 05 | **Strategy Consulting** | Data maturity assessments, technology roadmaps, and hands-on advisory |
 | 06 | **Data Governance** | Policies, access controls, and compliance frameworks for secure, trusted data |
 
+---
+
 ## Founders
 
 **Rohit Pundhir** — Co-Founder & Managing Partner
 Principal Engineer with expertise in distributed systems, cloud-native architecture, and AI-powered platforms. Leads technical strategy and product innovation.
-*Skills: Cloud Architecture · AI/ML · Platform Engineering*
+*Cloud Architecture · AI/ML · Platform Engineering*
 
 **Sucheta Chauhan** — Co-Founder & Managing Partner
 Strategic leader focused on business intelligence, client success, and organisational growth. Drives partnerships, delivery excellence, and operational vision.
-*Skills: Business Intelligence · Strategy · Operations*
+*Business Intelligence · Strategy · Operations*
+
+---
 
 ## Contact
 
 - **Email:** hello@kinsarintelligence.com
 - **Location:** India
 
+---
+
 ## Tech Stack
 
-This website is a static site built with vanilla HTML, CSS, and JavaScript — no frameworks or build tools required.
+Static site — no build tools required.
 
 ```
 kinsar-intelligence/
-├── index.html   # Main page
-├── style.css    # Styles
-└── main.js      # Interactivity (canvas animation, nav toggle, form)
+├── index.html   # Single-page site
+├── style.css    # Design system & styles
+├── main.js      # Canvas animation, nav, scroll effects
+└── README.md    # This file
 ```
 
 ## Deployment
 
-The site is deployed via **GitHub Pages** from the `main` branch root.
-
-Any push to `main` automatically reflects on the live site within a few minutes.
+Deployed via **GitHub Pages** from the `main` branch root. Any push to `main` goes live within minutes.
 
 ---
 

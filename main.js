@@ -91,7 +91,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll(
-  '.stat, .service-card, .team-card, .about__card, .section-title, .section-sub, .section-tag, .value'
+  '.stat, .service-card, .team-card, .about__card, .section-title, .section-sub, .section-tag, .value, .objective-card, .mission__name-card, .mission__statement'
 ).forEach(el => {
   el.classList.add('fade-up');
   observer.observe(el);
