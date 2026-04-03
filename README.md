@@ -18,7 +18,7 @@ Hosted on GitHub Pages · Deployed from `main` branch · HTTPS enforced
 
 ## About
 
-**Kinsar Intelligence LLP** is a technology and data intelligence firm registered in India (Est. 2025). We help organisations harness the full power of their data by combining deep technical expertise with strategic thinking — delivering solutions that are not just technically sound, but genuinely impactful.
+**Kinsar Intelligence LLP** is a technology and data intelligence firm incorporated in India in April 2026. We help organisations harness the full power of their data by combining deep technical expertise with strategic thinking — delivering solutions that are not just technically sound, but genuinely impactful.
 
 ### Core Values
 
@@ -76,7 +76,7 @@ Strategic leader focused on business intelligence, client success, and organisat
 
 ## Contact
 
-- **Email:** hello@kinsarintelligence.com
+- **Email:** rohit.pundhir@kinsar.in
 - **Location:** India
 
 ---
@@ -99,4 +99,4 @@ Deployed via **GitHub Pages** from the `main` branch root. Any push to `main` go
 
 ---
 
-&copy; 2025 Kinsar Intelligence LLP. All rights reserved.
+&copy; 2026 Kinsar Intelligence LLP. All rights reserved.

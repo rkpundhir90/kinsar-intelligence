@@ -1,107 +1,183 @@
-// ── Animated grid canvas background ─────────────────────
 (function () {
   const canvas = document.getElementById('grid-canvas');
   if (!canvas) return;
-  const ctx = canvas.getContext('2d');
 
-  let W, H, dots = [];
+  const ctx = canvas.getContext('2d');
+  let width = 0;
+  let height = 0;
+  let points = [];
+  const pointer = { x: -200, y: -200 };
 
   function resize() {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-    buildDots();
+    width = canvas.width = canvas.offsetWidth;
+    height = canvas.height = canvas.offsetHeight;
+    buildPoints();
   }
 
-  function buildDots() {
-    dots = [];
-    const spacing = 48;
-    for (let x = 0; x < W + spacing; x += spacing) {
-      for (let y = 0; y < H + spacing; y += spacing) {
-        dots.push({ x, y, ox: x, oy: y, vx: 0, vy: 0 });
+  function buildPoints() {
+    const spacing = Math.max(56, Math.min(90, Math.floor(width / 14)));
+    points = [];
+
+    for (let x = 0; x <= width + spacing; x += spacing) {
+      for (let y = 0; y <= height + spacing; y += spacing) {
+        points.push({
+          x,
+          y,
+          baseX: x,
+          baseY: y,
+          drift: Math.random() * Math.PI * 2
+        });
       }
     }
   }
 
-  let mouse = { x: -999, y: -999 };
-  document.addEventListener('mousemove', e => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
+  document.addEventListener('mousemove', (event) => {
+    pointer.x = event.clientX;
+    pointer.y = event.clientY;
   });
 
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
+  document.addEventListener('mouseleave', () => {
+    pointer.x = -200;
+    pointer.y = -200;
+  });
 
-    // grid lines
-    ctx.strokeStyle = 'rgba(99,102,241,0.06)';
-    ctx.lineWidth = 1;
-    const spacing = 48;
-    for (let x = 0; x < W; x += spacing) {
-      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+  function draw(time) {
+    ctx.clearRect(0, 0, width, height);
+
+    for (const point of points) {
+      const waveX = Math.sin(time * 0.0006 + point.drift) * 6;
+      const waveY = Math.cos(time * 0.0007 + point.drift) * 6;
+      const dx = point.baseX - pointer.x;
+      const dy = point.baseY - pointer.y;
+      const distance = Math.hypot(dx, dy);
+      const pull = Math.max(0, 150 - distance) / 150;
+
+      point.x += ((point.baseX + waveX + dx * pull * 0.12) - point.x) * 0.07;
+      point.y += ((point.baseY + waveY + dy * pull * 0.12) - point.y) * 0.07;
     }
-    for (let y = 0; y < H; y += spacing) {
-      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+
+    for (let index = 0; index < points.length; index += 1) {
+      const point = points[index];
+      const next = points[index + 1];
+
+      if (next && Math.abs(next.baseY - point.baseY) < 1) {
+        ctx.beginPath();
+        ctx.moveTo(point.x, point.y);
+        ctx.lineTo(next.x, next.y);
+        ctx.strokeStyle = 'rgba(18, 35, 48, 0.06)';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
     }
 
-    // animated dots
-    dots.forEach(d => {
-      const dx = d.x - mouse.x;
-      const dy = d.y - mouse.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      const force = Math.max(0, 80 - dist) / 80;
-
-      d.vx += (d.ox - d.x) * 0.08 + (dx / Math.max(dist, 1)) * force * 2;
-      d.vy += (d.oy - d.y) * 0.08 + (dy / Math.max(dist, 1)) * force * 2;
-      d.vx *= 0.82;
-      d.vy *= 0.82;
-      d.x += d.vx;
-      d.y += d.vy;
-
-      const opacity = 0.15 + force * 0.5;
-      const radius  = 1.5 + force * 2;
+    for (const point of points) {
       ctx.beginPath();
-      ctx.arc(d.x, d.y, radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(167,139,250,${opacity})`;
+      ctx.arc(point.x, point.y, 1.8, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(15, 118, 110, 0.18)';
       ctx.fill();
-    });
+    }
 
     requestAnimationFrame(draw);
   }
 
   window.addEventListener('resize', resize);
   resize();
-  draw();
+  requestAnimationFrame(draw);
 })();
 
-// ── Sticky nav ───────────────────────────────────────────
 const nav = document.querySelector('.nav');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
+  if (nav) {
+    nav.classList.toggle('scrolled', window.scrollY > 24);
+  }
 });
 
-// ── Mobile nav toggle ────────────────────────────────────
 const toggle = document.querySelector('.nav__toggle');
 const navLinks = document.querySelector('.nav__links');
-if (toggle) {
-  toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+if (toggle && navLinks) {
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
 }
 
-// ── Fade-up on scroll ────────────────────────────────────
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.12 });
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.16 });
 
-document.querySelectorAll(
-  '.stat, .service-card, .team-card, .about__card, .section-title, .section-sub, .section-tag, .value, .objective-card, .mission__name-card, .mission__statement'
-).forEach(el => {
-  el.classList.add('fade-up');
-  observer.observe(el);
+document.querySelectorAll('.fade-up, .fade-sequence').forEach((element) => {
+  observer.observe(element);
 });
 
-// ── Contact form ─────────────────────────────────────────
-function handleSubmit(e) {
-  e.preventDefault();
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
   const success = document.getElementById('form-success');
-  success.classList.add('show');
-  e.target.reset();
-  setTimeout(() => success.classList.remove('show'), 4000);
+  const error = document.getElementById('form-error');
+  const submitButton = document.getElementById('contact-submit');
+  const recipient = form.dataset.recipient;
+
+  if (!recipient) {
+    if (error) {
+      error.classList.add('show');
+    }
+    return;
+  }
+
+  if (success) {
+    success.classList.remove('show');
+  }
+
+  if (error) {
+    error.classList.remove('show');
+  }
+
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending Inquiry...';
+  }
+
+  const formData = new FormData(form);
+
+  fetch(`https://formsubmit.co/ajax/${recipient}`, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json'
+    },
+    body: formData
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+
+      return response.json();
+    })
+    .then(() => {
+      if (success) {
+        success.classList.add('show');
+      }
+
+      form.reset();
+    })
+    .catch(() => {
+      if (error) {
+        error.classList.add('show');
+      }
+    })
+    .finally(() => {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = submitButton.dataset.defaultLabel || 'Send Inquiry';
+      }
+    });
 }

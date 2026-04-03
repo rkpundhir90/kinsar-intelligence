@@ -4,25 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kinsar Intelligence LLP</title>
-  <meta name="description" content="Kinsar Intelligence LLP — Data-driven intelligence solutions for modern enterprises." />
+  <meta name="description" content="Kinsar Intelligence LLP designs practical AI systems for common business use cases, powered by data-intensive models, strong data foundations, and hands-on consulting." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- SVG shared defs (gradients + filters for logo) -->
   <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="kg" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#6366f1"/>
-        <stop offset="55%" stop-color="#a78bfa"/>
-        <stop offset="100%" stop-color="#38bdf8"/>
+        <stop offset="0%" stop-color="#0f766e"/>
+        <stop offset="52%" stop-color="#2dd4bf"/>
+        <stop offset="100%" stop-color="#f59e0b"/>
       </linearGradient>
       <radialGradient id="krg" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.22"/>
-        <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+        <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.18"/>
+        <stop offset="100%" stop-color="#0f766e" stop-opacity="0"/>
       </radialGradient>
       <filter id="kgf" x="-100%" y="-100%" width="300%" height="300%">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="b"/>
@@ -35,445 +33,344 @@
     </defs>
   </svg>
 
-  <!-- NAV -->
   <header class="nav">
     <div class="container nav__inner">
-      <a href="#" class="logo">
+      <a href="#top" class="logo">
         <span class="logo__mark">
           <svg width="34" height="34" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kinsar Intelligence">
             <circle cx="50" cy="50" r="46" fill="url(#krg)"/>
-            <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="rgba(99,102,241,0.08)" stroke="url(#kg)" stroke-width="1.5"/>
+            <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="rgba(15,118,110,0.08)" stroke="url(#kg)" stroke-width="1.5"/>
             <polygon points="50,21 75,35.5 75,64.5 50,79 25,64.5 25,35.5" fill="none" stroke="url(#kg)" stroke-width="0.8" stroke-dasharray="3,4" opacity="0.25"/>
-            <line x1="36" y1="24" x2="64" y2="76" stroke="#38bdf8" stroke-width="0.7" opacity="0.15"/>
-            <line x1="36" y1="76" x2="64" y2="24" stroke="#a78bfa" stroke-width="0.7" opacity="0.15"/>
+            <line x1="36" y1="24" x2="64" y2="76" stroke="#2dd4bf" stroke-width="0.7" opacity="0.15"/>
+            <line x1="36" y1="76" x2="64" y2="24" stroke="#f59e0b" stroke-width="0.7" opacity="0.15"/>
             <line x1="64" y1="24" x2="64" y2="76" stroke="url(#kg)" stroke-width="0.8" opacity="0.2"/>
-            <line x1="50" y1="37" x2="64" y2="50" stroke="#38bdf8" stroke-width="0.8" opacity="0.28"/>
-            <line x1="50" y1="63" x2="64" y2="50" stroke="#a78bfa" stroke-width="0.8" opacity="0.28"/>
+            <line x1="50" y1="37" x2="64" y2="50" stroke="#2dd4bf" stroke-width="0.8" opacity="0.28"/>
+            <line x1="50" y1="63" x2="64" y2="50" stroke="#f59e0b" stroke-width="0.8" opacity="0.28"/>
             <line x1="36" y1="24" x2="36" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
             <line x1="36" y1="50" x2="64" y2="24" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
             <line x1="36" y1="50" x2="64" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
             <circle cx="36" cy="50" r="12" fill="url(#kg)" opacity="0.08" filter="url(#kgf)"/>
             <circle cx="36" cy="24" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
             <circle cx="36" cy="76" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
-            <circle cx="64" cy="24" r="4" fill="#38bdf8" filter="url(#ksf)"/>
-            <circle cx="64" cy="76" r="4" fill="#a78bfa" filter="url(#ksf)"/>
-            <circle cx="50" cy="37" r="2.5" fill="#a78bfa"/>
-            <circle cx="50" cy="63" r="2.5" fill="#6366f1"/>
-            <circle cx="64" cy="50" r="3" fill="#38bdf8" filter="url(#ksf)" opacity="0.85"/>
+            <circle cx="64" cy="24" r="4" fill="#2dd4bf" filter="url(#ksf)"/>
+            <circle cx="64" cy="76" r="4" fill="#f59e0b" filter="url(#ksf)"/>
+            <circle cx="50" cy="37" r="2.5" fill="#2dd4bf"/>
+            <circle cx="50" cy="63" r="2.5" fill="#0f766e"/>
+            <circle cx="64" cy="50" r="3" fill="#2dd4bf" filter="url(#ksf)" opacity="0.85"/>
             <circle cx="36" cy="50" r="6.5" fill="url(#kg)" filter="url(#kgf)"/>
             <circle cx="36" cy="50" r="3.5" fill="#fff" opacity="0.3"/>
-            <circle cx="50" cy="6" r="2" fill="#6366f1" opacity="0.6"/>
-            <circle cx="88" cy="28" r="2" fill="#38bdf8" opacity="0.5"/>
-            <circle cx="88" cy="72" r="2" fill="#a78bfa" opacity="0.5"/>
-            <circle cx="50" cy="94" r="2" fill="#6366f1" opacity="0.6"/>
-            <circle cx="12" cy="72" r="2" fill="#a78bfa" opacity="0.5"/>
-            <circle cx="12" cy="28" r="2" fill="#38bdf8" opacity="0.5"/>
           </svg>
         </span>
         <span class="logo__text">Kinsar Intelligence</span>
       </a>
       <nav class="nav__links">
         <a href="#about">About</a>
-        <a href="#mission">Mission</a>
-        <a href="#services">Services</a>
-        <a href="#team">Team</a>
-        <a href="#contact" class="btn btn--outline">Contact Us</a>
+        <a href="#mission">Approach</a>
+        <a href="#services">Capabilities</a>
+        <a href="#team">Leadership</a>
+        <a href="#contact" class="btn btn--outline">Start A Conversation</a>
       </nav>
-      <button class="nav__toggle" aria-label="Toggle menu">&#9776;</button>
+      <button class="nav__toggle" aria-label="Toggle menu">Menu</button>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__bg">
-      <canvas id="grid-canvas"></canvas>
-    </div>
-    <div class="container hero__content">
-      <div class="hero__badge">Est. 2025 · India</div>
-      <h1 class="hero__title">Turning Data Into<br /><span class="gradient-text">Decisive Intelligence</span></h1>
-      <p class="hero__subtitle">We build intelligent systems that transform raw data into strategic advantage — empowering businesses to act with clarity and confidence.</p>
-      <div class="hero__actions">
-        <a href="#services" class="btn btn--primary">Explore Services</a>
-        <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+  <main id="top">
+    <section class="hero">
+      <div class="hero__bg">
+        <canvas id="grid-canvas"></canvas>
       </div>
-    </div>
-    <div class="hero__emblem" aria-hidden="true">
-      <svg width="300" height="300" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
-        <!-- Outer spinning rings -->
-        <circle cx="65" cy="65" r="62" fill="none" stroke="url(#kg)" stroke-width="0.7" stroke-dasharray="9,15" opacity="0.22">
-          <animateTransform attributeName="transform" type="rotate" from="0 65 65" to="360 65 65" dur="55s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="65" cy="65" r="57.5" fill="none" stroke="url(#kg)" stroke-width="0.4" stroke-dasharray="2,18" opacity="0.16">
-          <animateTransform attributeName="transform" type="rotate" from="360 65 65" to="0 65 65" dur="38s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="65" cy="65" r="53" fill="none" stroke="url(#kg)" stroke-width="0.3" opacity="0.1"/>
-        <!-- Main logo translated to center of 130x130 -->
-        <g transform="translate(15,15)">
-          <circle cx="50" cy="50" r="46" fill="url(#krg)"/>
-          <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="rgba(99,102,241,0.08)" stroke="url(#kg)" stroke-width="1.5"/>
-          <polygon points="50,21 75,35.5 75,64.5 50,79 25,64.5 25,35.5" fill="none" stroke="url(#kg)" stroke-width="0.8" stroke-dasharray="3,4" opacity="0.25"/>
-          <line x1="36" y1="24" x2="64" y2="76" stroke="#38bdf8" stroke-width="0.7" opacity="0.15"/>
-          <line x1="36" y1="76" x2="64" y2="24" stroke="#a78bfa" stroke-width="0.7" opacity="0.15"/>
-          <line x1="64" y1="24" x2="64" y2="76" stroke="url(#kg)" stroke-width="0.8" opacity="0.2"/>
-          <line x1="50" y1="37" x2="64" y2="50" stroke="#38bdf8" stroke-width="0.8" opacity="0.28"/>
-          <line x1="50" y1="63" x2="64" y2="50" stroke="#a78bfa" stroke-width="0.8" opacity="0.28"/>
-          <line x1="36" y1="24" x2="36" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
-          <line x1="36" y1="50" x2="64" y2="24" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
-          <line x1="36" y1="50" x2="64" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
-          <circle cx="36" cy="50" r="12" fill="url(#kg)" opacity="0.08" filter="url(#kgf)"/>
-          <circle cx="36" cy="24" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
-          <circle cx="36" cy="76" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
-          <circle cx="64" cy="24" r="4" fill="#38bdf8" filter="url(#ksf)"/>
-          <circle cx="64" cy="76" r="4" fill="#a78bfa" filter="url(#ksf)"/>
-          <circle cx="50" cy="37" r="2.5" fill="#a78bfa"/>
-          <circle cx="50" cy="63" r="2.5" fill="#6366f1"/>
-          <circle cx="64" cy="50" r="3" fill="#38bdf8" filter="url(#ksf)" opacity="0.85"/>
-          <circle cx="36" cy="50" r="6.5" fill="url(#kg)" filter="url(#kgf)"/>
-          <circle cx="36" cy="50" r="3.5" fill="#fff" opacity="0.3"/>
-          <circle cx="50" cy="6" r="2" fill="#6366f1" opacity="0.6"/>
-          <circle cx="88" cy="28" r="2" fill="#38bdf8" opacity="0.5"/>
-          <circle cx="88" cy="72" r="2" fill="#a78bfa" opacity="0.5"/>
-          <circle cx="50" cy="94" r="2" fill="#6366f1" opacity="0.6"/>
-          <circle cx="12" cy="72" r="2" fill="#a78bfa" opacity="0.5"/>
-          <circle cx="12" cy="28" r="2" fill="#38bdf8" opacity="0.5"/>
-        </g>
-      </svg>
-    </div>
-
-    <div class="hero__scroll">
-      <span></span>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats">
-    <div class="container stats__grid">
-      <div class="stat">
-        <span class="stat__num">10+</span>
-        <span class="stat__label">Years Combined Experience</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">AI</span>
-        <span class="stat__label">Powered Solutions</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">100%</span>
-        <span class="stat__label">Client Focused</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">LLP</span>
-        <span class="stat__label">Registered in India</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section about" id="about">
-    <div class="container about__inner">
-      <div class="about__text">
-        <div class="section-tag">About Us</div>
-        <h2 class="section-title">Intelligence That Moves Business Forward</h2>
-        <p>Kinsar Intelligence LLP is a technology and data intelligence firm founded with a single purpose — to help organizations harness the full power of their data.</p>
-        <p>We combine deep technical expertise with strategic thinking to deliver solutions that are not just technically sound, but genuinely impactful. From AI-powered analytics to scalable data infrastructure, we partner with our clients at every step.</p>
-        <div class="about__values">
-          <div class="value">
-            <div class="value__icon">&#9670;</div>
+      <div class="container hero__layout">
+        <div class="hero__content">
+          <div class="hero__badge">Incorporated April 2026 · India · AI Consulting And Delivery</div>
+          <p class="hero__eyebrow">Intelligent solutions for the use cases teams face every day.</p>
+          <h1 class="hero__title">Practical AI systems built on <span class="gradient-text">serious data foundations</span>.</h1>
+          <p class="hero__subtitle">Kinsar Intelligence helps organisations turn dense operational data into usable AI products: forecasting engines, copilots, retrieval systems, anomaly detection workflows, decision support tools, and modern data platforms that keep those systems trustworthy.</p>
+          <div class="hero__actions">
+            <a href="#services" class="btn btn--primary">See Core Capabilities</a>
+            <a href="#contact" class="btn btn--ghost">Talk To Kinsar</a>
+          </div>
+          <div class="hero__strip fade-sequence">
+            <span>Demand Forecasting</span>
+            <span>Ops Copilots</span>
+            <span>Knowledge Retrieval</span>
+            <span>Risk Monitoring</span>
+          </div>
+        </div>
+        <aside class="hero__panel fade-up">
+          <div class="hero__panel-head">
+            <span class="hero__panel-tag">Model Delivery Lens</span>
+            <span class="hero__panel-live">Live</span>
+          </div>
+          <div class="hero__signal">
             <div>
-              <strong>Clarity</strong>
-              <p>We make complexity simple and insights actionable.</p>
+              <span class="hero__signal-label">Most common client asks</span>
+              <strong>Automation, visibility, and decision speed</strong>
+            </div>
+            <span class="hero__signal-value">03</span>
+          </div>
+          <div class="hero__panel-grid">
+            <article>
+              <span>Use Cases</span>
+              <strong>Built around measurable workflows</strong>
+              <p>Support triage, demand planning, KPI assistants, search, recommendations.</p>
+            </article>
+            <article>
+              <span>Data Intensive Models</span>
+              <strong>Designed for noisy enterprise data</strong>
+              <p>Pipelines, retrieval layers, evaluation loops, observability, governance.</p>
+            </article>
+            <article>
+              <span>Consulting</span>
+              <strong>From advisory to implementation</strong>
+              <p>Architecture, roadmap, experimentation, production hardening, rollout.</p>
+            </article>
+            <article>
+              <span>Operating Model</span>
+              <strong>Lean teams, decisive execution</strong>
+              <p>High-context collaboration with founders directly involved in delivery.</p>
+            </article>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section signal-band">
+      <div class="container signal-band__grid fade-sequence">
+        <div class="signal-card">
+          <span class="signal-card__kicker">Common Use Case</span>
+          <strong>Executive intelligence</strong>
+          <p>Dashboards and AI summaries that reduce the time between data capture and action.</p>
+        </div>
+        <div class="signal-card">
+          <span class="signal-card__kicker">Common Use Case</span>
+          <strong>Operational copilots</strong>
+          <p>Assistants grounded in internal data for support, sales, documentation, and delivery teams.</p>
+        </div>
+        <div class="signal-card">
+          <span class="signal-card__kicker">Common Use Case</span>
+          <strong>Predictive systems</strong>
+          <p>Forecasting, anomaly detection, prioritisation, and risk scoring for live business workflows.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about__inner">
+        <div class="about__text fade-up">
+          <div class="section-tag">About Kinsar</div>
+          <h2 class="section-title">We focus on AI that survives contact with real operations.</h2>
+          <p>Kinsar Intelligence LLP is an AI consulting and delivery firm incorporated in April 2026. We work on common business use cases where the real challenge is not generating output, but grounding systems in messy, high-volume, high-context data.</p>
+          <p>Our work sits at the intersection of strategy, engineering, and model design. That means we do not stop at slideware. We help define the use case, shape the data model, build the system, and make it fit how teams actually operate.</p>
+        </div>
+        <div class="about__grid fade-sequence">
+          <article class="about__card about__card--wide">
+            <span>What we optimise for</span>
+            <h3>Useful systems, not novelty demos</h3>
+            <p>Every engagement is anchored to a workflow, a measurable bottleneck, and a decision that needs better support.</p>
+          </article>
+          <article class="about__card">
+            <span>Data Readiness</span>
+            <h3>Structured, unstructured, live</h3>
+            <p>Warehouses, documents, event streams, business rules, and human feedback loops.</p>
+          </article>
+          <article class="about__card">
+            <span>Delivery Style</span>
+            <h3>Advisory plus implementation</h3>
+            <p>Roadmaps, prototypes, production systems, and adoption support in one motion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mission" id="mission">
+      <div class="container mission__layout">
+        <div class="mission__intro fade-up">
+          <div class="section-tag">Approach</div>
+          <h2 class="section-title">How Kinsar turns data-heavy problems into reliable AI products.</h2>
+          <p class="section-sub">The value is not just in the model. It comes from the full system around it: data contracts, evaluation logic, workflow fit, and operating trust.</p>
+        </div>
+        <div class="mission__columns">
+          <article class="mission__card fade-up">
+            <span class="mission__card-tag">Common Use Cases</span>
+            <ul class="mission__list">
+              <li>Customer support copilots grounded in policy and knowledge bases</li>
+              <li>Sales and revenue forecasting from fragmented historical data</li>
+              <li>Search and retrieval over internal documents and operational records</li>
+              <li>Anomaly and risk detection across business events and transactions</li>
+              <li>Leadership reporting with narrative intelligence, not just charts</li>
+            </ul>
+          </article>
+          <article class="mission__card fade-up">
+            <span class="mission__card-tag">Delivery Method</span>
+            <div class="mission__steps">
+              <div class="mission__step">
+                <strong>01. Frame the decision</strong>
+                <p>Identify the workflow, the actors, the data sources, and the operational consequence of getting it right or wrong.</p>
+              </div>
+              <div class="mission__step">
+                <strong>02. Build the intelligence layer</strong>
+                <p>Create the pipeline, retrieval strategy, model stack, and evaluation rules required for dependable output.</p>
+              </div>
+              <div class="mission__step">
+                <strong>03. Operationalise the system</strong>
+                <p>Integrate with dashboards, internal tools, and delivery processes so the model becomes part of the business rhythm.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-tag center">Capabilities</div>
+        <h2 class="section-title center">Built for AI consulting where data complexity is the real work.</h2>
+        <p class="section-sub center">We help clients move from unclear opportunity to production-ready intelligence systems.</p>
+        <div class="services__grid fade-sequence">
+          <article class="service-card">
+            <span class="service-card__num">01</span>
+            <h3>AI Strategy And Opportunity Mapping</h3>
+            <p>Prioritise use cases, define success criteria, and sequence delivery around business value instead of hype cycles.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__num">02</span>
+            <h3>Data Intensive Model Systems</h3>
+            <p>Design model pipelines that work with large, mixed-quality enterprise data and remain explainable under pressure.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__num">03</span>
+            <h3>RAG, Search, And Knowledge Layers</h3>
+            <p>Ground generative workflows in internal documents, process knowledge, and permission-aware retrieval structures.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__num">04</span>
+            <h3>Forecasting And Decision Support</h3>
+            <p>Build systems for prediction, scenario modelling, and alerting across revenue, operations, and risk functions.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__num">05</span>
+            <h3>Data Platform And Pipeline Engineering</h3>
+            <p>Create the ingestion, transformation, storage, and monitoring foundations that keep AI products dependable.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__num">06</span>
+            <h3>Governance, Evaluation, And Rollout</h3>
+            <p>Establish guardrails, testing, feedback loops, and adoption practices so systems remain useful after launch.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team" id="team">
+      <div class="container">
+        <div class="section-tag center">Leadership</div>
+        <h2 class="section-title center">Founder-led delivery with technical depth and operational judgment.</h2>
+        <p class="section-sub center">Kinsar brings together platform engineering, AI systems thinking, and business intelligence leadership.</p>
+        <div class="team__grid fade-sequence">
+          <article class="team-card">
+            <div class="team-card__avatar"><span>RP</span></div>
+            <div class="team-card__body">
+              <h3>Rohit Pundhir</h3>
+              <span class="team-card__role">Co-Founder &amp; Managing Partner</span>
+              <p>Rohit leads technical strategy, systems architecture, and the delivery of AI products that depend on strong platform and data engineering foundations.</p>
+              <div class="team-card__tags">
+                <span>AI Systems</span>
+                <span>Cloud Architecture</span>
+                <span>Platform Engineering</span>
+              </div>
+            </div>
+          </article>
+          <article class="team-card">
+            <div class="team-card__avatar team-card__avatar--alt"><span>SC</span></div>
+            <div class="team-card__body">
+              <h3>Sucheta Chauhan</h3>
+              <span class="team-card__role">Co-Founder &amp; Managing Partner</span>
+              <p>Sucheta drives client alignment, advisory engagement, and the translation of intelligence systems into business outcomes teams can adopt.</p>
+              <div class="team-card__tags">
+                <span>Business Intelligence</span>
+                <span>Consulting</span>
+                <span>Operations</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact__shell">
+        <div class="contact__text fade-up">
+          <div class="section-tag">Contact</div>
+          <h2 class="section-title">Bring the use case. We will help shape the system.</h2>
+          <p>If you are exploring AI for a real operational problem and need clarity on architecture, data readiness, or delivery strategy, contact Kinsar directly.</p>
+          <div class="contact__details">
+            <div class="contact__item">
+              <span class="contact__label">Official Email</span>
+              <a href="mailto:rohit.pundhir@kinsar.in">rohit.pundhir@kinsar.in</a>
+            </div>
+            <div class="contact__item">
+              <span class="contact__label">Base</span>
+              <span>India</span>
             </div>
           </div>
-          <div class="value">
-            <div class="value__icon">&#9670;</div>
-            <div>
-              <strong>Integrity</strong>
-              <p>Honest advice, transparent processes, real results.</p>
-            </div>
-          </div>
-          <div class="value">
-            <div class="value__icon">&#9670;</div>
-            <div>
-              <strong>Innovation</strong>
-              <p>Continuously evolving with the frontier of technology.</p>
-            </div>
-          </div>
         </div>
+        <form class="contact__form fade-up" id="contact-form" onsubmit="handleSubmit(event)" data-recipient="rohit.pundhir@kinsar.in">
+          <input type="hidden" name="_subject" value="New inquiry from kinsar.in" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" />
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Rahul Sharma" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="rahul@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Use Case Brief</label>
+            <textarea id="message" name="message" rows="5" placeholder="Describe the workflow, data sources, and business decision you want to improve." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="contact-submit" data-default-label="Send Inquiry">Send Inquiry</button>
+          <p class="form-success" id="form-success" role="status" aria-live="polite">Thanks. Your inquiry has been forwarded to Kinsar.</p>
+          <p class="form-error" id="form-error" role="alert">The inquiry could not be sent right now. Please email rohit.pundhir@kinsar.in directly.</p>
+        </form>
       </div>
-      <div class="about__visual">
-        <div class="about__card about__card--1">
-          <div class="about__card-icon">&#128200;</div>
-          <h4>Data Analytics</h4>
-          <p>Uncover patterns that drive decisions</p>
-        </div>
-        <div class="about__card about__card--2">
-          <div class="about__card-icon">&#129504;</div>
-          <h4>AI & ML</h4>
-          <p>Intelligent automation at scale</p>
-        </div>
-        <div class="about__card about__card--3">
-          <div class="about__card-icon">&#128272;</div>
-          <h4>Data Security</h4>
-          <p>Protecting what matters most</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- VISION & MISSION -->
-  <section class="section mission" id="mission">
-    <div class="container">
-      <div class="section-tag center">Vision &amp; Mission</div>
-      <h2 class="section-title center">What Drives Us</h2>
-      <p class="section-sub center">Built on a clear purpose — to turn intelligence into real-world impact.</p>
-
-      <!-- Name meaning card -->
-      <div class="mission__name-card">
-        <div class="mission__name-lines">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="mission__name-inner">
-          <div class="mission__quote-icon">&#10077;</div>
-          <blockquote class="mission__quote-text">
-            KINSAR INTELLIGENCE signifies a forward-thinking and innovative entity focused on delivering smart, data-driven solutions. It reflects a blend of advanced technology and strategic insight, aimed at solving complex business challenges &mdash; embodying <em>intelligence</em>, <em>precision</em>, and a commitment to empowering organizations through modern digital and analytical capabilities.
-          </blockquote>
-          <div class="mission__name-footer">
-            <span class="mission__pulse-dot"></span>
-            <span class="mission__name-label">The Name &amp; Its Meaning</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mission statement -->
-      <div class="mission__statement">
-        <div class="mission__statement-icon-wrap">
-          <span>&#127919;</span>
-        </div>
-        <div class="mission__statement-body">
-          <div class="mission__statement-tag">Our Mission</div>
-          <p>To engage in research, innovation, and development of new technologies, products, and solutions in the fields of <strong>artificial intelligence</strong>, <strong>machine learning</strong>, and <strong>emerging digital ecosystems</strong>.</p>
-        </div>
-        <div class="mission__statement-glow"></div>
-      </div>
-
-      <!-- Objectives -->
-      <div class="mission__objectives">
-
-        <div class="objective-card">
-          <div class="objective-card__top">
-            <span class="objective-card__num">01</span>
-            <span class="objective-card__icon">&#128187;</span>
-          </div>
-          <h3>Software &amp; Digital Solutions</h3>
-          <p>Design, develop, test, maintain, and deliver computer software, mobile applications, web-based platforms, SaaS products, and digital solutions using modern technologies including artificial intelligence, data analytics, and cloud computing.</p>
-          <div class="objective-card__bar"></div>
-        </div>
-
-        <div class="objective-card">
-          <div class="objective-card__top">
-            <span class="objective-card__num">02</span>
-            <span class="objective-card__icon">&#128101;</span>
-          </div>
-          <h3>Consultancy &amp; Advisory</h3>
-          <p>Provide consultancy, advisory, and support services in information technology, software development, system integration, digital transformation, and business process automation to clients in India and abroad.</p>
-          <div class="objective-card__bar"></div>
-        </div>
-
-        <div class="objective-card">
-          <div class="objective-card__top">
-            <span class="objective-card__num">03</span>
-            <span class="objective-card__icon">&#128736;</span>
-          </div>
-          <h3>IT-Enabled Services</h3>
-          <p>Undertake IT-enabled services including software support, maintenance, managed services, data processing, cybersecurity services, and other related technological services.</p>
-          <div class="objective-card__bar"></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section services" id="services">
-    <div class="container">
-      <div class="section-tag center">Services</div>
-      <h2 class="section-title center">What We Do</h2>
-      <p class="section-sub center">End-to-end intelligence solutions tailored to your business goals.</p>
-      <div class="services__grid">
-
-        <div class="service-card">
-          <div class="service-card__num">01</div>
-          <div class="service-card__icon">&#128202;</div>
-          <h3>Business Intelligence</h3>
-          <p>Custom dashboards, KPI frameworks, and reporting systems that give leadership real-time visibility into what matters.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__num">02</div>
-          <div class="service-card__icon">&#129504;</div>
-          <h3>AI & Machine Learning</h3>
-          <p>Predictive models, NLP pipelines, and computer vision systems built for production-grade reliability.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__num">03</div>
-          <div class="service-card__icon">&#128736;</div>
-          <h3>Data Engineering</h3>
-          <p>Modern data stacks — from ingestion to warehousing. We build pipelines that scale with your ambitions.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__num">04</div>
-          <div class="service-card__icon">&#9729;</div>
-          <h3>Cloud & DevOps</h3>
-          <p>GCP, AWS, and Kubernetes-based infrastructure designed for high availability and cost efficiency.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__num">05</div>
-          <div class="service-card__icon">&#128203;</div>
-          <h3>Strategy Consulting</h3>
-          <p>Data maturity assessments, technology roadmaps, and hands-on advisory to accelerate your transformation.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__num">06</div>
-          <div class="service-card__icon">&#128272;</div>
-          <h3>Data Governance</h3>
-          <p>Policies, access controls, and compliance frameworks that keep your data assets secure and trusted.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- TEAM -->
-  <section class="section team" id="team">
-    <div class="container">
-      <div class="section-tag center">Leadership</div>
-      <h2 class="section-title center">The Founders</h2>
-      <p class="section-sub center">Kinsar Intelligence is built on deep technical expertise and a shared passion for solving hard problems.</p>
-      <div class="team__grid">
-
-        <div class="team-card">
-          <div class="team-card__avatar">
-            <span>RP</span>
-          </div>
-          <div class="team-card__body">
-            <h3>Rohit Pundhir</h3>
-            <span class="team-card__role">Co-Founder & Managing Partner</span>
-            <p>Principal Engineer with deep expertise in distributed systems, cloud-native architecture, and AI-powered platforms. Rohit leads technical strategy and product innovation at Kinsar Intelligence.</p>
-            <div class="team-card__tags">
-              <span>Cloud Architecture</span>
-              <span>AI/ML</span>
-              <span>Platform Engineering</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="team-card">
-          <div class="team-card__avatar team-card__avatar--alt">
-            <span>SC</span>
-          </div>
-          <div class="team-card__body">
-            <h3>Sucheta Chauhan</h3>
-            <span class="team-card__role">Co-Founder & Managing Partner</span>
-            <p>Strategic leader with a focus on business intelligence, client success, and organizational growth. Sucheta drives partnerships, delivery excellence, and the firm's operational vision.</p>
-            <div class="team-card__tags">
-              <span>Business Intelligence</span>
-              <span>Strategy</span>
-              <span>Operations</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section contact" id="contact">
-    <div class="container contact__inner">
-      <div class="contact__text">
-        <div class="section-tag">Contact</div>
-        <h2 class="section-title">Let's Build Something Remarkable</h2>
-        <p>Have a project in mind or want to explore how Kinsar Intelligence can help your organisation? We'd love to hear from you.</p>
-        <div class="contact__details">
-          <div class="contact__item">
-            <span class="contact__icon">&#9993;</span>
-            <a href="mailto:hello@kinsarintelligence.com">hello@kinsarintelligence.com</a>
-          </div>
-          <div class="contact__item">
-            <span class="contact__icon">&#127968;</span>
-            <span>India</span>
-          </div>
-        </div>
-      </div>
-      <form class="contact__form" onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" placeholder="Rahul Sharma" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="rahul@company.com" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" rows="4" placeholder="Tell us about your project..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full">Send Message &#8594;</button>
-        <p class="form-success" id="form-success">Thanks! We'll be in touch soon.</p>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="#" class="logo">
+        <a href="#top" class="logo">
           <span class="logo__mark">
-          <svg width="34" height="34" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kinsar Intelligence">
-            <circle cx="50" cy="50" r="46" fill="url(#krg)"/>
-            <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="rgba(99,102,241,0.08)" stroke="url(#kg)" stroke-width="1.5"/>
-            <polygon points="50,21 75,35.5 75,64.5 50,79 25,64.5 25,35.5" fill="none" stroke="url(#kg)" stroke-width="0.8" stroke-dasharray="3,4" opacity="0.25"/>
-            <line x1="36" y1="24" x2="64" y2="76" stroke="#38bdf8" stroke-width="0.7" opacity="0.15"/>
-            <line x1="36" y1="76" x2="64" y2="24" stroke="#a78bfa" stroke-width="0.7" opacity="0.15"/>
-            <line x1="64" y1="24" x2="64" y2="76" stroke="url(#kg)" stroke-width="0.8" opacity="0.2"/>
-            <line x1="50" y1="37" x2="64" y2="50" stroke="#38bdf8" stroke-width="0.8" opacity="0.28"/>
-            <line x1="50" y1="63" x2="64" y2="50" stroke="#a78bfa" stroke-width="0.8" opacity="0.28"/>
-            <line x1="36" y1="24" x2="36" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
-            <line x1="36" y1="50" x2="64" y2="24" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
-            <line x1="36" y1="50" x2="64" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
-            <circle cx="36" cy="50" r="12" fill="url(#kg)" opacity="0.08" filter="url(#kgf)"/>
-            <circle cx="36" cy="24" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
-            <circle cx="36" cy="76" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
-            <circle cx="64" cy="24" r="4" fill="#38bdf8" filter="url(#ksf)"/>
-            <circle cx="64" cy="76" r="4" fill="#a78bfa" filter="url(#ksf)"/>
-            <circle cx="50" cy="37" r="2.5" fill="#a78bfa"/>
-            <circle cx="50" cy="63" r="2.5" fill="#6366f1"/>
-            <circle cx="64" cy="50" r="3" fill="#38bdf8" filter="url(#ksf)" opacity="0.85"/>
-            <circle cx="36" cy="50" r="6.5" fill="url(#kg)" filter="url(#kgf)"/>
-            <circle cx="36" cy="50" r="3.5" fill="#fff" opacity="0.3"/>
-            <circle cx="50" cy="6" r="2" fill="#6366f1" opacity="0.6"/>
-            <circle cx="88" cy="28" r="2" fill="#38bdf8" opacity="0.5"/>
-            <circle cx="88" cy="72" r="2" fill="#a78bfa" opacity="0.5"/>
-            <circle cx="50" cy="94" r="2" fill="#6366f1" opacity="0.6"/>
-            <circle cx="12" cy="72" r="2" fill="#a78bfa" opacity="0.5"/>
-            <circle cx="12" cy="28" r="2" fill="#38bdf8" opacity="0.5"/>
-          </svg>
-        </span>
+            <svg width="34" height="34" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kinsar Intelligence">
+              <circle cx="50" cy="50" r="46" fill="url(#krg)"/>
+              <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="rgba(15,118,110,0.08)" stroke="url(#kg)" stroke-width="1.5"/>
+              <polygon points="50,21 75,35.5 75,64.5 50,79 25,64.5 25,35.5" fill="none" stroke="url(#kg)" stroke-width="0.8" stroke-dasharray="3,4" opacity="0.25"/>
+              <line x1="36" y1="24" x2="64" y2="76" stroke="#2dd4bf" stroke-width="0.7" opacity="0.15"/>
+              <line x1="36" y1="76" x2="64" y2="24" stroke="#f59e0b" stroke-width="0.7" opacity="0.15"/>
+              <line x1="36" y1="24" x2="36" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
+              <line x1="36" y1="50" x2="64" y2="24" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
+              <line x1="36" y1="50" x2="64" y2="76" stroke="url(#kg)" stroke-width="2.8" stroke-linecap="round" opacity="0.85"/>
+              <circle cx="36" cy="24" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
+              <circle cx="36" cy="76" r="3.5" fill="url(#kg)" filter="url(#ksf)"/>
+              <circle cx="64" cy="24" r="4" fill="#2dd4bf" filter="url(#ksf)"/>
+              <circle cx="64" cy="76" r="4" fill="#f59e0b" filter="url(#ksf)"/>
+              <circle cx="36" cy="50" r="6.5" fill="url(#kg)" filter="url(#kgf)"/>
+            </svg>
+          </span>
           <span class="logo__text">Kinsar Intelligence</span>
         </a>
-        <p>Data-driven intelligence for modern enterprises.</p>
+        <p>AI consulting for common business use cases powered by data-intensive systems.</p>
       </div>
       <div class="footer__links">
         <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#team">Team</a>
+        <a href="#mission">Approach</a>
+        <a href="#services">Capabilities</a>
+        <a href="#team">Leadership</a>
         <a href="#contact">Contact</a>
       </div>
-      <p class="footer__copy">&copy; 2025 Kinsar Intelligence LLP. All rights reserved.</p>
+      <p class="footer__copy">&copy; 2026 Kinsar Intelligence LLP. All rights reserved.</p>
     </div>
   </footer>
 
