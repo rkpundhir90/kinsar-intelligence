@@ -4,7 +4,7 @@
 
 ## Live Website
 
-**[https://rkpundhir90.github.io/kinsar-intelligence/](https://rkpundhir90.github.io/kinsar-intelligence/)**
+**[https://kinsar.in/](https://kinsar.in)**
 
 Hosted on GitHub Pages · Deployed from `main` branch · HTTPS enforced
 
