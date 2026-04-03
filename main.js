@@ -124,9 +124,9 @@ function handleSubmit(event) {
   const success = document.getElementById('form-success');
   const error = document.getElementById('form-error');
   const submitButton = document.getElementById('contact-submit');
-  const recipient = form.dataset.recipient;
+  const endpoint = form.action;
 
-  if (!recipient) {
+  if (!endpoint) {
     if (error) {
       error.classList.add('show');
     }
@@ -148,7 +148,7 @@ function handleSubmit(event) {
 
   const formData = new FormData(form);
 
-  fetch(`https://formsubmit.co/ajax/${recipient}`, {
+  fetch(endpoint.replace('https://formsubmit.co/', 'https://formsubmit.co/ajax/'), {
     method: 'POST',
     headers: {
       Accept: 'application/json'
